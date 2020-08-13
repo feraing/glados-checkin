@@ -18,7 +18,6 @@ def start():
     state = requests.get(url2, headers={'cookie': cookie, 'referer': referer})
 
     if 'message' in checkin.text:
-        print(checkin.json())
         mess = checkin.json()['message']
         time = state.json()['data']['leftDays']
         time = time.split('.')[0]
